@@ -1,8 +1,8 @@
 all: modeEval.c
-	gcc modeEval.c -o modeEval -lssl -lcrypto -Wno-deprecated-declarations
+	gcc modeEval.c -o evaluateModes -lssl -lcrypto -Wno-deprecated-declarations -lpthread
 
-run: modeEval
-	./modeEval
+run: evaluateModes
+	./evaluateModes
 
 clean: 
-	rm modeEval
+	rm evaluateModes
