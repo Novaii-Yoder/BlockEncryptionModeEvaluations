@@ -6,3 +6,9 @@ run: evaluateModes
 
 clean: 
 	rm evaluateModes
+
+thread: tpooltest.c tpool.c tpool.h
+	gcc tpooltest.c tpool.c -o tpooltest -lpthread
+
+runthread: tpooltest
+	./tpooltest
